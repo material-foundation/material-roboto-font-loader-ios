@@ -2,6 +2,10 @@ use_frameworks!
 
 target "RobotoFontLoaderExample" do
   pod 'MDFRobotoFontLoader', :path => '../../../'
+
+  # Note: this works around the unreleased state of the FontDiskLoader.
+  pod 'MDFFontDiskLoader', :path => '../../../../material-font-disk-loader-ios/'
+
   target 'RobotoFontLoaderExampleTests' do
   end
 end
