@@ -1,67 +1,101 @@
-# MDFRobotoFontLoader
+<!--{% if site.link_to_site == "true" %}-->
+See <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/">MDC site documentation</a> for richer experience.
+<!--{% else %}See <a href="https://github.com/material-components/material-components-ios/tree/develop/components/RobotoFontLoader">GitHub</a> for README documentation.{% endif %}-->
 
-[![Build Status](https://travis-ci.org/material-foundation/material-roboto-font-loader-ios.svg?branch=develop)](https://travis-ci.org/material-foundation/material-roboto-font-loader-ios)
-[![codecov](https://codecov.io/gh/material-foundation/material-roboto-font-loader-ios/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-foundation/material-roboto-font-loader-ios)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MaterialFoundationRobotoFontLoader.svg)](https://cocoapods.org/pods/MaterialFoundationRobotoFontLoader)
-[![Platform](https://img.shields.io/cocoapods/p/MaterialFoundationRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialFoundationRobotoFontLoader)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/MaterialFoundationRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialFoundationRobotoFontLoader)
+# Roboto Font Loader
+
+The Roboto Font Loader lazy loads the Roboto font.
+<!--{: .intro :}-->
+
+### Material Design Specifications
+
+<ul class="icon-list">
+  <li class="icon-link">
+    <a href="https://www.google.com/design/spec/resources/roboto-noto-fonts.html">
+      Roboto font resource
+    </a>
+  </li>
+  <li class="icon-link">
+    <a href="https://www.google.com/design/spec/typography.html">
+      Typography
+    </a>
+  </li>
+</ul>
+
+### API Documentation
+
+<ul class="icon-list">
+  <li class="icon-link">
+    <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/apidocs/Classes/MDCRobotoFontLoader.html">
+      MDCRobotoFontLoader
+    </a>
+  </li>
+</ul>
 
 ## Installation
 
+### Requirements
+
+- Xcode 7.0 or higher.
+- iOS SDK version 7.0 or higher.
+
 ### Installation with CocoaPods
 
-> CocoaPods is a dependency manager for Objective-C and Swift libraries. CocoaPods automates the
-> process of using third-party libraries in your projects. See
-> [the Getting Started guide](https://guides.cocoapods.org/using/getting-started.html) for more
-> information. You can install it with the following command:
->
->     gem install cocoapods
+To add this component to your Xcode project using CocoaPods, add the following to your `Podfile`:
 
-Add `MaterialFoundationRobotoFontLoader` to your `Podfile`:
+```
+pod 'MaterialComponents/RobotoFontLoader'
+```
 
-    pod 'MaterialFoundationRobotoFontLoader'
+Then, run the following command:
 
-Then run the following command:
+~~~ bash
+pod install
+~~~
 
-    pod install
+## Usage
 
-### Usage
+The Roboto Font Loader Component provides APIs for getting the Roboto Fonts. Consider using the
+Typography Component for font styles recomended by Material spec.
 
-Import the framework:
+### Importing
 
-    @import MaterialFoundationRobotoFontLoader;
+Before using Roboto Font Loader, you'll need to import it:
 
-You will now have access to all of the APIs.
+<!--<div class="material-code-render" markdown="1">-->
+#### Objective-C
 
-## Example apps/unit tests
+~~~ objc
+#import "MaterialRobotoFontLoader.h"
+~~~
 
-Check out a local copy of the repo to access the Catalog application by running the following
-commands:
+#### Swift
+~~~ swift
+import MaterialComponents
+~~~
+<!--</div>-->
 
-    git clone https://github.com/material-foundation/material-roboto-font-loader-ios.git
-    cd material-roboto-font-loader-ios
-    pod install
-    open MaterialFoundationRobotoFontLoader.xcworkspace
+### Dependencies
 
-## Guides
+The Roboto Font Loader Component depends on the FontDiskLoader Component.
 
-1. [Architecture](#architecture)
-2. [How to ...](#how-to-...)
+<!--<div class="material-code-render" markdown="1">-->
+#### Objective-C
+~~~ objc
+UIFont *font = [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:16];
+~~~
 
-### Architecture
+#### Swift
+~~~ swift
+let myFont:UIFont = [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:16];
+}
+~~~
+<!--</div>-->
 
-### How to ...
-
-## Contributing
-
-We welcome contributions!
-
-Check out our [upcoming milestones](https://github.com/material-foundation/material-roboto-font-loader-ios/milestones).
-
-Learn more about [our team](https://material-motion.github.io/material-motion/team/),
-[our community](https://material-motion.github.io/material-motion/team/community/), and
-our [contributor essentials](https://material-motion.github.io/material-motion/team/essentials/).
-
-## License
-
-Licensed under the Apache 2.0 license. See LICENSE for details.
+## Advanced Usage
+### Typography's weak dependency
+When included in your build the Roboto Font Loader is used by the Typography component. This runtime
+check occurs when no specific Font Loader is set on Typography, resulting in Roboto being used for
+Material Typography.
+For more information see
+[Typography](https://github.com/material-components/material-components-ios/tree/develop/components/Typography).
