@@ -7,17 +7,22 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
-
-@end
+#import "CatalogByConvention.h"
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  return YES;
+  self.window = [[UIWindow alloc]initWithFrame: [[UIScreen mainScreen] bounds]];
+
+  UIViewController *rootViewController = [[CBCNodeListViewController alloc] initWithNode:CBCCreateNavigationTree()];
+  rootViewController.title = @"Catalog by Convention";
+
+  UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+  self.window.rootViewController = navController;
+
+  [self.window makeKeyAndVisible];
+  return true;
 }
 
 @end
