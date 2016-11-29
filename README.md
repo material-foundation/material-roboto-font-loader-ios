@@ -72,7 +72,6 @@ UIFont *font = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
 
 #### Swift
 ~~~ swift
-let myFont:UIFont = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
-}
+let myFont:UIFont = MDFRobotoFontLoader.sharedInstance()regularFontOfSize(16)
 ~~~
 <!--</div>-->
