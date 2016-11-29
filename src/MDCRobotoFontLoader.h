@@ -16,12 +16,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MaterialTypography.h"
-
 /**
  The MDCRobotoFontLoader class provides a central location where the Roboto fonts are lazily loaded.
  */
-@interface MDCRobotoFontLoader : NSObject <MDCTypographyFontLoading>
+@interface MDCRobotoFontLoader : NSObject
 
 /** Shared singleton instance. */
 + (nonnull MDCRobotoFontLoader *)sharedInstance;
