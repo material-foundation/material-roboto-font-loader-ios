@@ -1,11 +1,6 @@
-<!--{% if site.link_to_site == "true" %}-->
-See <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/">MDF site documentation</a> for richer experience.
-<!--{% else %}See <a href="https://github.com/material-components/material-components-ios/tree/develop/components/RobotoFontLoader">GitHub</a> for README documentation.{% endif %}-->
-
 # Roboto Font Loader
 
 The Roboto Font Loader lazy loads the Roboto font.
-<!--{: .intro :}-->
 
 ### Material Design Specifications
 
@@ -22,16 +17,6 @@ The Roboto Font Loader lazy loads the Roboto font.
   </li>
 </ul>
 
-### API Documentation
-
-<ul class="icon-list">
-  <li class="icon-link">
-    <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/apidocs/Classes/MDFRobotoFontLoader.html">
-      MDFRobotoFontLoader
-    </a>
-  </li>
-</ul>
-
 ## Installation
 
 ### Requirements
@@ -44,7 +29,7 @@ The Roboto Font Loader lazy loads the Roboto font.
 To add this component to your Xcode project using CocoaPods, add the following to your `Podfile`:
 
 ```
-pod 'MaterialComponents/RobotoFontLoader'
+pod 'MDFRobotoFontLoader'
 ```
 
 Then, run the following command:
@@ -55,8 +40,8 @@ pod install
 
 ## Usage
 
-The Roboto Font Loader Component provides APIs for getting the Roboto Fonts. Consider using the
-Typography Component for font styles recomended by Material spec.
+The Roboto Font Loader provides APIs for getting the Roboto Fonts. Consider using the
+Typography Material Component for iOS font styles recommended by Material spec.
 
 ### Importing
 
@@ -71,7 +56,7 @@ Before using Roboto Font Loader, you'll need to import it:
 
 #### Swift
 ~~~ swift
-import MaterialComponents
+import MDFRobotoFontLoader
 ~~~
 <!--</div>-->
 
@@ -91,11 +76,3 @@ let myFont:UIFont = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
 }
 ~~~
 <!--</div>-->
-
-## Advanced Usage
-### Typography's weak dependency
-When included in your build the Roboto Font Loader is used by the Typography component. This runtime
-check occurs when no specific Font Loader is set on Typography, resulting in Roboto being used for
-Material Typography.
-For more information see
-[Typography](https://github.com/material-components/material-components-ios/tree/develop/components/Typography).
