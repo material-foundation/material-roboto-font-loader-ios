@@ -1,0 +1,7 @@
+use_frameworks!
+
+target "RobotoFontLoaderExample" do
+  pod 'MDFRobotoFontLoader', :path => '../../../'
+  target 'RobotoFontLoaderExampleTests' do
+  end
+end

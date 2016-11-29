@@ -1,0 +1,16 @@
+PODS:
+  - MDFRobotoFontLoader (1.0.0)
+
+DEPENDENCIES:
+  - MDFRobotoFontLoader (from `../../../`)
+
+EXTERNAL SOURCES:
+  MDFRobotoFontLoader:
+    :path: "../../../"
+
+SPEC CHECKSUMS:
+  MDFRobotoFontLoader: 337df48c154e6f312b1ecb0b5b569a819defef7a
+
+PODFILE CHECKSUM: 2060826dc2d039650f9722e75592f9f5c7a47a27
+
+COCOAPODS: 1.0.1
