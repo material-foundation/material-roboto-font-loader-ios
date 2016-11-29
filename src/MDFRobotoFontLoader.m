@@ -16,8 +16,28 @@
 
 #import "MDFRobotoFontLoader.h"
 
-#import "MDFFontDiskLoader.h"
-#import "private/MDFRoboto+Constants.h"
+#import "MaterialFontDiskLoader.h"
+
+NSString *const MDFRobotoRegularFontName = @"Roboto-Regular";
+NSString *const MDFRobotoRegularItalicFontName = @"Roboto-Italic";
+NSString *const MDFRobotoBoldFontName = @"Roboto-Bold";
+NSString *const MDFRobotoBoldItalicFontName = @"Roboto-BoldItalic";
+NSString *const MDFRobotoMediumFontName = @"Roboto-Medium";
+NSString *const MDFRobotoMediumItalicFontName = @"Roboto-MediumItalic";
+NSString *const MDFRobotoLightFontName = @"Roboto-Light";
+NSString *const MDFRobotoLightItalicFontName = @"Roboto-LightItalic";
+
+NSString *const MDFRobotoRegularFontFilename = @"Roboto-Regular.ttf";
+NSString *const MDFRobotoRegularItalicFontFilename = @"Roboto-Italic.ttf";
+NSString *const MDFRobotoBoldFontFilename = @"Roboto-Bold.ttf";
+NSString *const MDFRobotoBoldItalicFontFilename = @"Roboto-BoldItalic.ttf";
+NSString *const MDFRobotoMediumFontFilename = @"Roboto-Medium.ttf";
+NSString *const MDFRobotoMediumItalicFontFilename = @"Roboto-MediumItalic.ttf";
+NSString *const MDFRobotoLightFontFilename = @"Roboto-Light.ttf";
+NSString *const MDFRobotoLightItalicFontFilename = @"Roboto-LightItalic.ttf";
+
+NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
+
 
 @interface MDFRobotoFontLoader ()
 @property(nonatomic, strong) MDFFontDiskLoader *lightFontLoader;
