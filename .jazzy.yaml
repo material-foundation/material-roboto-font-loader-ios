@@ -1,0 +1,7 @@
+module: MaterialMotionRobotoFontLoader
+module_version: 1.0.0
+umbrella_header: src/MaterialMotionRobotoFontLoader.h
+objc: true
+sdk: iphonesimulator
+github_url: https://github.com/material-foundation/material-roboto-font-loader-ios
+github_file_prefix: https://github.com/material-foundation/material-roboto-font-loader-ios/tree/v1.0.0
