@@ -34,7 +34,7 @@
 }
 
 + (NSArray *)catalogBreadcrumbs {
-  return @[ @"Typography and Fonts", @"Roboto Font Loader" ];
+  return @[ @"Typography and Fonts", @"Roboto vs System" ];
 }
 
 + (NSString *)catalogStoryboardName {
