@@ -13,13 +13,13 @@
   "arc.feature.start.default": "origin/develop",
   "unit.xcode": {
     "build": {
-      "workspace": "MaterialMotionRobotoFontLoader.xcworkspace",
+      "workspace": "MaterialFoundationRobotoFontLoader.xcworkspace",
       "scheme": "UnitTests",
       "configuration": "Debug",
       "destination": "platform=iOS Simulator,name=iPhone 6s"
     },
     "coverage": {
-      "product": "MaterialMotionRobotoFontLoader.framework/MaterialMotionRobotoFontLoader"
+      "product": "MaterialFoundationRobotoFontLoader.framework/MaterialFoundationRobotoFontLoader"
     },
     "pre-build": "pod install"
   }

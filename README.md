@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/material-foundation/material-roboto-font-loader-ios.svg?branch=develop)](https://travis-ci.org/material-foundation/material-roboto-font-loader-ios)
 [![codecov](https://codecov.io/gh/material-foundation/material-roboto-font-loader-ios/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-foundation/material-roboto-font-loader-ios)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MaterialMotionRobotoFontLoader.svg)](https://cocoapods.org/pods/MaterialMotionRobotoFontLoader)
-[![Platform](https://img.shields.io/cocoapods/p/MaterialMotionRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialMotionRobotoFontLoader)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/MaterialMotionRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialMotionRobotoFontLoader)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MaterialFoundationRobotoFontLoader.svg)](https://cocoapods.org/pods/MaterialFoundationRobotoFontLoader)
+[![Platform](https://img.shields.io/cocoapods/p/MaterialFoundationRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialFoundationRobotoFontLoader)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/MaterialFoundationRobotoFontLoader.svg)](http://cocoadocs.org/docsets/MaterialFoundationRobotoFontLoader)
 
 ## Installation
 
@@ -17,9 +17,9 @@
 >
 >     gem install cocoapods
 
-Add `MaterialMotionRobotoFontLoader` to your `Podfile`:
+Add `MaterialFoundationRobotoFontLoader` to your `Podfile`:
 
-    pod 'MaterialMotionRobotoFontLoader'
+    pod 'MaterialFoundationRobotoFontLoader'
 
 Then run the following command:
 
@@ -29,7 +29,7 @@ Then run the following command:
 
 Import the framework:
 
-    @import MaterialMotionRobotoFontLoader;
+    @import MaterialFoundationRobotoFontLoader;
 
 You will now have access to all of the APIs.
 
@@ -41,7 +41,7 @@ commands:
     git clone https://github.com/material-foundation/material-roboto-font-loader-ios.git
     cd material-roboto-font-loader-ios
     pod install
-    open MaterialMotionRobotoFontLoader.xcworkspace
+    open MaterialFoundationRobotoFontLoader.xcworkspace
 
 ## Guides
 

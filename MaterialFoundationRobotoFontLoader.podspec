@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name         = "MaterialMotionRobotoFontLoader"
+  s.name         = "MaterialFoundationRobotoFontLoader"
   s.summary      = "MDFRobotoFontLoader"
   s.version      = "1.0.0"
-  s.authors      = "The Material Motion Authors"
+  s.authors      = "The Material Foundation Authors"
   s.license      = "Apache 2.0"
   s.homepage     = "https://github.com/material-foundation/material-roboto-font-loader-ios"
   s.source       = { :git => "https://github.com/material-foundation/material-roboto-font-loader-ios.git", :tag => "v" + s.version.to_s }
@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
     ss.source_files = "examples/*.{swift,h,m}", "examples/supplemental/*.{swif,h,m}"
     ss.exclude_files = "examples/TableOfContents.swift"
     ss.resources = "examples/supplemental/*.{xcassets}"
-    ss.dependency "MaterialMotionRobotoFontLoader/lib"
+    ss.dependency "MaterialFoundationRobotoFontLoader/lib"
   end
 
   s.subspec "tests" do |ss|
     ss.source_files = "tests/src/*.{swift}", "tests/src/private/*.{swift}"
-    ss.dependency "MaterialMotionRobotoFontLoader/lib"
+    ss.dependency "MaterialFoundationRobotoFontLoader/lib"
   end
 end

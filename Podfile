@@ -1,15 +1,15 @@
-workspace 'MaterialMotionRobotoFontLoader.xcworkspace'
+workspace 'MaterialFoundationRobotoFontLoader.xcworkspace'
 use_frameworks!
 
 target "Catalog" do
   pod 'CatalogByConvention'
-  pod 'MaterialMotionRobotoFontLoader/examples', :path => './'
+  pod 'MaterialFoundationRobotoFontLoader/examples', :path => './'
   project 'examples/apps/Catalog/Catalog.xcodeproj'
 end
 
 target "UnitTests" do
   project 'examples/apps/Catalog/Catalog.xcodeproj'
-  pod 'MaterialMotionRobotoFontLoader/tests', :path => './'
+  pod 'MaterialFoundationRobotoFontLoader/tests', :path => './'
 end
 
 post_install do |installer|
