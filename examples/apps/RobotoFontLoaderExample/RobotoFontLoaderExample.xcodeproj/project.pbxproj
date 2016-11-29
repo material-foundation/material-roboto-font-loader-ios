@@ -14,6 +14,8 @@
 		20BB4D491DEE191500838A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D481DEE191500838A41 /* Assets.xcassets */; };
 		20BB4D4C1DEE191500838A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D4A1DEE191500838A41 /* LaunchScreen.storyboard */; };
 		20BB4D571DEE191500838A41 /* RobotoFontLoaderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D561DEE191500838A41 /* RobotoFontLoaderExampleTests.m */; };
+		89EBBF13EFCF114308937390 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */; };
+		C2EF2AC79EFC0FB9768D0AB7 /* Pods_RobotoFontLoaderExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 		20BB4D521DEE191500838A41 /* RobotoFontLoaderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotoFontLoaderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BB4D561DEE191500838A41 /* RobotoFontLoaderExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobotoFontLoaderExampleTests.m; sourceTree = "<group>"; };
 		20BB4D581DEE191500838A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591BBC13F7D71A42B6E9CE0F /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87BE723A4A8621845880FBE6 /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD44B0EEB67BC2FBF1920605 /* Pods-RobotoFontLoaderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample/Pods-RobotoFontLoaderExample.debug.xcconfig"; sourceTree = "<group>"; };
+		E79A0B6A2D2A7D4F3038A5F1 /* Pods-RobotoFontLoaderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample/Pods-RobotoFontLoaderExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2EF2AC79EFC0FB9768D0AB7 /* Pods_RobotoFontLoaderExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89EBBF13EFCF114308937390 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B048719B257207A0D7406F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */,
+				563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20BB4D301DEE191500838A41 = {
 			isa = PBXGroup;
 			children = (
 				20BB4D3B1DEE191500838A41 /* RobotoFontLoaderExample */,
 				20BB4D551DEE191500838A41 /* RobotoFontLoaderExampleTests */,
 				20BB4D3A1DEE191500838A41 /* Products */,
+				9B4C7DB5B45C7F9A49D4B73F /* Pods */,
+				01B048719B257207A0D7406F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +132,17 @@
 			path = RobotoFontLoaderExampleTests;
 			sourceTree = "<group>";
 		};
+		9B4C7DB5B45C7F9A49D4B73F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD44B0EEB67BC2FBF1920605 /* Pods-RobotoFontLoaderExample.debug.xcconfig */,
+				E79A0B6A2D2A7D4F3038A5F1 /* Pods-RobotoFontLoaderExample.release.xcconfig */,
+				591BBC13F7D71A42B6E9CE0F /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig */,
+				87BE723A4A8621845880FBE6 /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20BB4D5B1DEE191500838A41 /* Build configuration list for PBXNativeTarget "RobotoFontLoaderExample" */;
 			buildPhases = (
+				3C33FA37846D03A5826BE09E /* [CP] Check Pods Manifest.lock */,
 				20BB4D351DEE191500838A41 /* Sources */,
 				20BB4D361DEE191500838A41 /* Frameworks */,
 				20BB4D371DEE191500838A41 /* Resources */,
+				3E7B3F2DA631F2D65D429269 /* [CP] Embed Pods Frameworks */,
+				91193DE5F7471862D7DCD424 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20BB4D5E1DEE191500838A41 /* Build configuration list for PBXNativeTarget "RobotoFontLoaderExampleTests" */;
 			buildPhases = (
+				E55C9DFFF62B80F441BD955C /* [CP] Check Pods Manifest.lock */,
 				20BB4D4E1DEE191500838A41 /* Sources */,
 				20BB4D4F1DEE191500838A41 /* Frameworks */,
 				20BB4D501DEE191500838A41 /* Resources */,
+				BDA3C8A16F3EDA64B86DD974 /* [CP] Embed Pods Frameworks */,
+				10384E8BF02E0084AECA49F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +245,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10384E8BF02E0084AECA49F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C33FA37846D03A5826BE09E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3E7B3F2DA631F2D65D429269 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RobotoFontLoaderExample/Pods-RobotoFontLoaderExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91193DE5F7471862D7DCD424 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RobotoFontLoaderExample/Pods-RobotoFontLoaderExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDA3C8A16F3EDA64B86DD974 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E55C9DFFF62B80F441BD955C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20BB4D351DEE191500838A41 /* Sources */ = {
@@ -349,6 +480,7 @@
 		};
 		20BB4D5C1DEE191500838A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD44B0EEB67BC2FBF1920605 /* Pods-RobotoFontLoaderExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RobotoFontLoaderExample/Info.plist;
@@ -360,6 +492,7 @@
 		};
 		20BB4D5D1DEE191500838A41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79A0B6A2D2A7D4F3038A5F1 /* Pods-RobotoFontLoaderExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RobotoFontLoaderExample/Info.plist;
@@ -371,6 +504,7 @@
 		};
 		20BB4D5F1DEE191500838A41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591BBC13F7D71A42B6E9CE0F /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RobotoFontLoaderExampleTests/Info.plist;
@@ -383,6 +517,7 @@
 		};
 		20BB4D601DEE191500838A41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87BE723A4A8621845880FBE6 /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RobotoFontLoaderExampleTests/Info.plist;
@@ -412,6 +547,7 @@
 				20BB4D5D1DEE191500838A41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20BB4D5E1DEE191500838A41 /* Build configuration list for PBXNativeTarget "RobotoFontLoaderExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +556,7 @@
 				20BB4D601DEE191500838A41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

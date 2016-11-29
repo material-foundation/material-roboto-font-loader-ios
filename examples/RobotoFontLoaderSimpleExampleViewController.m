@@ -31,7 +31,7 @@
   // sizes. See https://github.com/material-components/material-components-ios/tree/develop/components/Typography
   UILabel *label = [[UILabel alloc] init];
   label.text = @"This is Roboto regular 16";
-  label.font = [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:16];
+  label.font = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
 
   [label sizeToFit];
   label.autoresizingMask = flexibleMargins;

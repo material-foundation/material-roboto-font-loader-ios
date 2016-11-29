@@ -30,7 +30,7 @@
   self.view.backgroundColor = [UIColor whiteColor];
 
   _robotoLabel.font =
-      [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:_robotoLabel.font.pointSize];
+      [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:_robotoLabel.font.pointSize];
 }
 
 + (NSArray *)catalogBreadcrumbs {

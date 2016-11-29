@@ -17,24 +17,24 @@
 #import <UIKit/UIKit.h>
 
 /** The constants defining the names of the fonts inside the font files for Roboto. */
-extern NSString *const MDCRobotoRegularFontName;
-extern NSString *const MDCRobotoRegularItalicFontName;
-extern NSString *const MDCRobotoBoldFontName;
-extern NSString *const MDCRobotoBoldItalicFontName;
-extern NSString *const MDCRobotoMediumFontName;
-extern NSString *const MDCRobotoMediumItalicFontName;
-extern NSString *const MDCRobotoLightFontName;
-extern NSString *const MDCRobotoLightItalicFontName;
+extern NSString *const MDFRobotoRegularFontName;
+extern NSString *const MDFRobotoRegularItalicFontName;
+extern NSString *const MDFRobotoBoldFontName;
+extern NSString *const MDFRobotoBoldItalicFontName;
+extern NSString *const MDFRobotoMediumFontName;
+extern NSString *const MDFRobotoMediumItalicFontName;
+extern NSString *const MDFRobotoLightFontName;
+extern NSString *const MDFRobotoLightItalicFontName;
 
 /** The constants defining the font files for Roboto. */
-extern NSString *const MDCRobotoRegularFontFilename;
-extern NSString *const MDCRobotoRegularItalicFontFilename;
-extern NSString *const MDCRobotoBoldFontFilename;
-extern NSString *const MDCRobotoBoldItalicFontFilename;
-extern NSString *const MDCRobotoMediumFontFilename;
-extern NSString *const MDCRobotoMediumItalicFontFilename;
-extern NSString *const MDCRobotoLightFontFilename;
-extern NSString *const MDCRobotoLightItalicFontFilename;
+extern NSString *const MDFRobotoRegularFontFilename;
+extern NSString *const MDFRobotoRegularItalicFontFilename;
+extern NSString *const MDFRobotoBoldFontFilename;
+extern NSString *const MDFRobotoBoldItalicFontFilename;
+extern NSString *const MDFRobotoMediumFontFilename;
+extern NSString *const MDFRobotoMediumItalicFontFilename;
+extern NSString *const MDFRobotoLightFontFilename;
+extern NSString *const MDFRobotoLightItalicFontFilename;
 
 /** The constant defining the bundle that has the font files for Roboto. */
-extern NSString *const MDCRobotoBundle;
+extern NSString *const MDFRobotoBundle;

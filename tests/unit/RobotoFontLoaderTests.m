@@ -16,11 +16,11 @@
 
 #import <XCTest/XCTest.h>
 
-#import "MDCFontDiskLoader.h"
-#import "MDCRobotoFontLoader.h"
+#import "MDFFontDiskLoader.h"
+#import "MDFRobotoFontLoader.h"
 // TODO(iangordon): Re-add 'private/' to the path below once our Podspec specfically defines our
 // header search paths instead of flattening our header files into a single directory.
-#import "MDCRoboto+Constants.h"
+#import "MDFRoboto+Constants.h"
 
 static const CGFloat kEpsilonAccuracy = 0.001f;
 
@@ -40,20 +40,20 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 @interface RobotoFontLoaderTests : XCTestCase
 @end
 
-@interface MDCFontDiskLoader (Testing)
+@interface MDFFontDiskLoader (Testing)
 @property(nonatomic, assign) BOOL disableSanityChecks;
 @end
 
-@interface MDCRobotoFontLoader (Testing)
-@property(nonatomic, strong) MDCFontDiskLoader *lightFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *regularFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *mediumFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *boldFontLoader;
+@interface MDFRobotoFontLoader (Testing)
+@property(nonatomic, strong) MDFFontDiskLoader *lightFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *regularFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *mediumFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *boldFontLoader;
 
-@property(nonatomic, strong) MDCFontDiskLoader *lightItalicFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *italicFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *mediumItalicFontLoader;
-@property(nonatomic, strong) MDCFontDiskLoader *boldItalicFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *lightItalicFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *italicFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *mediumItalicFontLoader;
+@property(nonatomic, strong) MDFFontDiskLoader *boldItalicFontLoader;
 
 @property(nonatomic, strong, null_resettable) NSBundle *baseBundle;
 @property(nonatomic, assign) BOOL disableSanityChecks;
@@ -69,7 +69,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testRobotoRegularWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader regularFontOfSize:size];
@@ -77,14 +77,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The regular font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoRegularFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoRegularFontName,
                         @"The font name must match the regular font.");
 }
 
 - (void)testRobotoMediumWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader mediumFontOfSize:size];
@@ -92,14 +92,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The medium font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoMediumFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoMediumFontName,
                         @"The font name must match the medium font.");
 }
 
 - (void)testRobotoLightWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader lightFontOfSize:size];
@@ -107,14 +107,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The light font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoLightFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoLightFontName,
                         @"The font name must match the light font.");
 }
 
 - (void)testRobotoBoldWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader boldFontOfSize:size];
@@ -122,14 +122,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The bold font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoBoldFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoBoldFontName,
                         @"The font name must match the bold font.");
 }
 
 - (void)testRobotoItalicWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader italicFontOfSize:size];
@@ -137,14 +137,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The italic font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoRegularItalicFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoRegularItalicFontName,
                         @"The font name must match the italic font.");
 }
 
 - (void)testRobotoMediumItalicWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader mediumItalicFontOfSize:size];
@@ -152,14 +152,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The medium italic font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoMediumItalicFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoMediumItalicFontName,
                         @"The font name must match the medium italic font.");
 }
 
 - (void)testRobotoLightItalicWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader lightItalicFontOfSize:size];
@@ -167,14 +167,14 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The light italic font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoLightItalicFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoLightItalicFontName,
                         @"The font name must match the light italic font.");
 }
 
 - (void)testRobotoBoldItalicWithSize {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [MDCRobotoFontLoader sharedInstance];
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
 
   // When
   UIFont *font = [fontLoader boldItalicFontOfSize:size];
@@ -182,17 +182,17 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
   // Then
   XCTAssertEqualWithAccuracy(font.pointSize, size, kEpsilonAccuracy,
                              @"The bold italic font must be the size that was asked for.");
-  XCTAssertEqualObjects(font.fontName, MDCRobotoBoldItalicFontName,
+  XCTAssertEqualObjects(font.fontName, MDFRobotoBoldItalicFontName,
                         @"The font name must match the bold italic font.");
 }
 
 - (void)testLightFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.lightFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.lightFontLoader.fontURL];
   fontLoader.lightFontLoader.disableSanityChecks = YES;
 
@@ -208,10 +208,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.regularFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.regularFontLoader.fontURL];
   fontLoader.regularFontLoader.disableSanityChecks = YES;
 
@@ -227,10 +227,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testMediumFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.mediumFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.mediumFontLoader.fontURL];
   fontLoader.mediumFontLoader.disableSanityChecks = YES;
 
@@ -246,10 +246,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testBoldFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.boldFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.boldFontLoader.fontURL];
   fontLoader.boldFontLoader.disableSanityChecks = YES;
 
@@ -265,10 +265,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testLightItalicFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.lightItalicFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.lightItalicFontLoader.fontURL];
   fontLoader.lightItalicFontLoader.disableSanityChecks = YES;
 
@@ -284,10 +284,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testItalicFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.italicFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.italicFontLoader.fontURL];
   fontLoader.italicFontLoader.disableSanityChecks = YES;
 
@@ -303,10 +303,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testMediumItalicFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.mediumItalicFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.mediumItalicFontLoader.fontURL];
   fontLoader.mediumItalicFontLoader.disableSanityChecks = YES;
 
@@ -322,10 +322,10 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 - (void)testBoldItalicFallbackSystemFonts {
   // Given
   CGFloat size = [self randomNumber];
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   fontLoader.disableSanityChecks = YES;
   fontLoader.boldItalicFontLoader =
-      [[MDCFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
+      [[MDFFontDiskLoader alloc] initWithFontName:@"something that doesn't exist"
                                           fontURL:fontLoader.boldItalicFontLoader.fontURL];
   fontLoader.boldItalicFontLoader.disableSanityChecks = YES;
 
@@ -340,7 +340,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
 - (void)testSettingBaseBundleResetsLoader {
   // Given
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   NSArray *existingFontLoaders = @[
     fontLoader.regularFontLoader, fontLoader.lightFontLoader, fontLoader.mediumFontLoader,
     fontLoader.boldFontLoader, fontLoader.italicFontLoader, fontLoader.lightItalicFontLoader,
@@ -349,7 +349,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
   // When
   fontLoader.baseBundle = nil;
-  fontLoader.baseBundle = [MDCRobotoFontLoader baseBundle];
+  fontLoader.baseBundle = [MDFRobotoFontLoader baseBundle];
   NSArray *newFontLoaders = @[
     fontLoader.regularFontLoader, fontLoader.lightFontLoader, fontLoader.mediumFontLoader,
     fontLoader.boldFontLoader, fontLoader.italicFontLoader, fontLoader.lightItalicFontLoader,
@@ -358,8 +358,8 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
   // Then
   for (NSUInteger index = 0; index < existingFontLoaders.count; ++index) {
-    MDCFontDiskLoader *exisitngFontLoader = existingFontLoaders[index];
-    MDCFontDiskLoader *newFontLoader = newFontLoaders[index];
+    MDFFontDiskLoader *exisitngFontLoader = existingFontLoaders[index];
+    MDFFontDiskLoader *newFontLoader = newFontLoaders[index];
     XCTAssertNotEqual(newFontLoader, exisitngFontLoader,  // Check that pointers are different.
                       @"Fontloader must be new objects when the base bundle gets set.");
   }
@@ -367,7 +367,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
 - (void)testResetingBaseBundle {
   // Given
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
 
   // When
   fontLoader.baseBundle = nil;
@@ -378,7 +378,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
 - (void)testDescription {
   // Given
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   NSArray *expected = @[
     [NSString stringWithFormat:@"%@: %@", NSStringFromSelector(@selector(lightFontLoader)),
                                fontLoader.lightFontLoader],
@@ -410,7 +410,7 @@ static const CGFloat kEpsilonAccuracy = 0.001f;
 
 - (void)testDescriptionWithNoLoaderMustBeMostlyEmpty {
   // Given
-  MDCRobotoFontLoader *fontLoader = [[MDCRobotoFontLoader alloc] initInternal];
+  MDFRobotoFontLoader *fontLoader = [[MDFRobotoFontLoader alloc] initInternal];
   NSString *expected = @" (\n)\n";
 
   // When

@@ -17,12 +17,12 @@
 #import <UIKit/UIKit.h>
 
 /**
- The MDCRobotoFontLoader class provides a central location where the Roboto fonts are lazily loaded.
+ The MDFRobotoFontLoader class provides a central location where the Roboto fonts are lazily loaded.
  */
-@interface MDCRobotoFontLoader : NSObject
+@interface MDFRobotoFontLoader : NSObject
 
 /** Shared singleton instance. */
-+ (nonnull MDCRobotoFontLoader *)sharedInstance;
++ (nonnull MDFRobotoFontLoader *)sharedInstance;
 
 /** This is a singleton: Use sharedInstance instead. */
 - (nonnull instancetype)init NS_UNAVAILABLE;

@@ -1,5 +1,5 @@
 <!--{% if site.link_to_site == "true" %}-->
-See <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/">MDC site documentation</a> for richer experience.
+See <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/">MDF site documentation</a> for richer experience.
 <!--{% else %}See <a href="https://github.com/material-components/material-components-ios/tree/develop/components/RobotoFontLoader">GitHub</a> for README documentation.{% endif %}-->
 
 # Roboto Font Loader
@@ -26,8 +26,8 @@ The Roboto Font Loader lazy loads the Roboto font.
 
 <ul class="icon-list">
   <li class="icon-link">
-    <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/apidocs/Classes/MDCRobotoFontLoader.html">
-      MDCRobotoFontLoader
+    <a href="https://material-ext.appspot.com/mdc-ios-preview/components/RobotoFontLoader/apidocs/Classes/MDFRobotoFontLoader.html">
+      MDFRobotoFontLoader
     </a>
   </li>
 </ul>
@@ -82,12 +82,12 @@ The Roboto Font Loader Component depends on the FontDiskLoader Component.
 <!--<div class="material-code-render" markdown="1">-->
 #### Objective-C
 ~~~ objc
-UIFont *font = [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:16];
+UIFont *font = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
 ~~~
 
 #### Swift
 ~~~ swift
-let myFont:UIFont = [[MDCRobotoFontLoader sharedInstance] regularFontOfSize:16];
+let myFont:UIFont = [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
 }
 ~~~
 <!--</div>-->
