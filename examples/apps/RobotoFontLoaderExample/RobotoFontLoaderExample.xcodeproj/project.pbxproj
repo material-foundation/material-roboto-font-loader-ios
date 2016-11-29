@@ -13,7 +13,7 @@
 		20BB4D471DEE191500838A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D451DEE191500838A41 /* Main.storyboard */; };
 		20BB4D491DEE191500838A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D481DEE191500838A41 /* Assets.xcassets */; };
 		20BB4D4C1DEE191500838A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D4A1DEE191500838A41 /* LaunchScreen.storyboard */; };
-		20BB4D571DEE191500838A41 /* RobotoFontLoaderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D561DEE191500838A41 /* RobotoFontLoaderExampleTests.m */; };
+		20BB4D621DEE26C000838A41 /* RobotoFontLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D611DEE26C000838A41 /* RobotoFontLoaderTests.m */; };
 		89EBBF13EFCF114308937390 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */; };
 		C2EF2AC79EFC0FB9768D0AB7 /* Pods_RobotoFontLoaderExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,8 @@
 		20BB4D4B1DEE191500838A41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20BB4D4D1DEE191500838A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20BB4D521DEE191500838A41 /* RobotoFontLoaderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotoFontLoaderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20BB4D561DEE191500838A41 /* RobotoFontLoaderExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RobotoFontLoaderExampleTests.m; sourceTree = "<group>"; };
 		20BB4D581DEE191500838A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BB4D611DEE26C000838A41 /* RobotoFontLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotoFontLoaderTests.m; path = ../../../../tests/unit/RobotoFontLoaderTests.m; sourceTree = "<group>"; };
 		3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		591BBC13F7D71A42B6E9CE0F /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		20BB4D551DEE191500838A41 /* RobotoFontLoaderExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				20BB4D561DEE191500838A41 /* RobotoFontLoaderExampleTests.m */,
+				20BB4D611DEE26C000838A41 /* RobotoFontLoaderTests.m */,
 				20BB4D581DEE191500838A41 /* Info.plist */,
 			);
 			path = RobotoFontLoaderExampleTests;
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20BB4D571DEE191500838A41 /* RobotoFontLoaderExampleTests.m in Sources */,
+				20BB4D621DEE26C000838A41 /* RobotoFontLoaderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

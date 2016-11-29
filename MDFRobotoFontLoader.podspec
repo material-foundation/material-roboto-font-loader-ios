@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.public_header_files = "src/*.h"
   s.source_files = "src/*.{h,m,mm}", "src/private/*.{h,m,mm}"
+  s.resources = ["src/MaterialRobotoFontLoader.bundle"]
   s.dependency 'MDFFontDiskLoader'
 end
