@@ -14,6 +14,9 @@
 		20BB4D491DEE191500838A41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D481DEE191500838A41 /* Assets.xcassets */; };
 		20BB4D4C1DEE191500838A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D4A1DEE191500838A41 /* LaunchScreen.storyboard */; };
 		20BB4D621DEE26C000838A41 /* RobotoFontLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D611DEE26C000838A41 /* RobotoFontLoaderTests.m */; };
+		20BB4D661DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D641DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.m */; };
+		20BB4D671DEE292400838A41 /* RobotoVsSystemExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D651DEE292400838A41 /* RobotoVsSystemExampleViewController.m */; };
+		20BB4D691DEE292A00838A41 /* RobotoVsSystem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D681DEE292A00838A41 /* RobotoVsSystem.storyboard */; };
 		89EBBF13EFCF114308937390 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */; };
 		C2EF2AC79EFC0FB9768D0AB7 /* Pods_RobotoFontLoaderExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,10 @@
 		20BB4D521DEE191500838A41 /* RobotoFontLoaderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobotoFontLoaderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BB4D581DEE191500838A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20BB4D611DEE26C000838A41 /* RobotoFontLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotoFontLoaderTests.m; path = ../../../../tests/unit/RobotoFontLoaderTests.m; sourceTree = "<group>"; };
+		20BB4D631DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RobotoFontLoaderSimpleExampleViewController.h; path = ../../../RobotoFontLoaderSimpleExampleViewController.h; sourceTree = "<group>"; };
+		20BB4D641DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotoFontLoaderSimpleExampleViewController.m; path = ../../../RobotoFontLoaderSimpleExampleViewController.m; sourceTree = "<group>"; };
+		20BB4D651DEE292400838A41 /* RobotoVsSystemExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotoVsSystemExampleViewController.m; path = ../../../RobotoVsSystemExampleViewController.m; sourceTree = "<group>"; };
+		20BB4D681DEE292A00838A41 /* RobotoVsSystem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RobotoVsSystem.storyboard; path = ../../../resources/RobotoVsSystem.storyboard; sourceTree = "<group>"; };
 		3042090B945117CDA6AAAEAA /* Pods_RobotoFontLoaderExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		563789189B80E7CD41322690 /* Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RobotoFontLoaderExample_RobotoFontLoaderExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		591BBC13F7D71A42B6E9CE0F /* Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests/Pods-RobotoFontLoaderExample-RobotoFontLoaderExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +113,10 @@
 				20BB4D401DEE191500838A41 /* AppDelegate.m */,
 				20BB4D421DEE191500838A41 /* ViewController.h */,
 				20BB4D431DEE191500838A41 /* ViewController.m */,
+				20BB4D681DEE292A00838A41 /* RobotoVsSystem.storyboard */,
+				20BB4D631DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.h */,
+				20BB4D641DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.m */,
+				20BB4D651DEE292400838A41 /* RobotoVsSystemExampleViewController.m */,
 				20BB4D451DEE191500838A41 /* Main.storyboard */,
 				20BB4D481DEE191500838A41 /* Assets.xcassets */,
 				20BB4D4A1DEE191500838A41 /* LaunchScreen.storyboard */,
@@ -234,6 +245,7 @@
 				20BB4D4C1DEE191500838A41 /* LaunchScreen.storyboard in Resources */,
 				20BB4D491DEE191500838A41 /* Assets.xcassets in Resources */,
 				20BB4D471DEE191500838A41 /* Main.storyboard in Resources */,
+				20BB4D691DEE292A00838A41 /* RobotoVsSystem.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +356,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BB4D661DEE292400838A41 /* RobotoFontLoaderSimpleExampleViewController.m in Sources */,
+				20BB4D671DEE292400838A41 /* RobotoVsSystemExampleViewController.m in Sources */,
 				20BB4D441DEE191500838A41 /* ViewController.m in Sources */,
 				20BB4D411DEE191500838A41 /* AppDelegate.m in Sources */,
 				20BB4D3E1DEE191500838A41 /* main.m in Sources */,
