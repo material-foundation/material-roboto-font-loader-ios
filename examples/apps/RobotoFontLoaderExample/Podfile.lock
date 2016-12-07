@@ -6,12 +6,9 @@ PODS:
 
 DEPENDENCIES:
   - CatalogByConvention
-  - MDFFontDiskLoader (from `../../../../material-font-disk-loader-ios/`)
   - MDFRobotoFontLoader (from `../../../`)
 
 EXTERNAL SOURCES:
-  MDFFontDiskLoader:
-    :path: "../../../../material-font-disk-loader-ios/"
   MDFRobotoFontLoader:
     :path: "../../../"
 
@@ -20,6 +17,6 @@ SPEC CHECKSUMS:
   MDFFontDiskLoader: 95d6c92c644f24897dee5a860973b0da4d9a1ce4
   MDFRobotoFontLoader: 4c4f388aed303e99e57e4c99d04230ed7b870f9d
 
-PODFILE CHECKSUM: 74430d337f691113bb689e9060fdf65deade59fa
+PODFILE CHECKSUM: 052a88478a1b381320d170733a3507d3153c787e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
