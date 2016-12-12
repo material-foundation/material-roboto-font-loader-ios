@@ -4,6 +4,9 @@ PODS:
   - MDFFontDiskLoader (1.0.0)
   - MDFRobotoFontLoader (1.0.0):
     - MDFFontDiskLoader
+    - MDFRobotoFontLoader/RobotoFontLoader (= 1.0.0)
+  - MDFRobotoFontLoader/RobotoFontLoader (1.0.0):
+    - MDFFontDiskLoader
 
 DEPENDENCIES:
   - CatalogByConvention
@@ -20,7 +23,7 @@ SPEC CHECKSUMS:
   CatalogByConvention: be55c2263132e4f9f59299ac8a528ee8715b3275
   MaterialComponents: 6c525c8aaabf376c20a10530ce6785833ff96225
   MDFFontDiskLoader: 95d6c92c644f24897dee5a860973b0da4d9a1ce4
-  MDFRobotoFontLoader: 4c4f388aed303e99e57e4c99d04230ed7b870f9d
+  MDFRobotoFontLoader: 60965d31e3aa04635f0a10751bb6d93ae17d5035
 
 PODFILE CHECKSUM: 9c800d8dd5128c665571755445379226846233f8
 

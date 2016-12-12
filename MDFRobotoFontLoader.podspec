@@ -8,8 +8,19 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/material-foundation/material-roboto-font-loader-ios.git", :tag => "v" + s.version.to_s }
   s.platform     = :ios, "7.0"
   s.requires_arc = true
-  s.public_header_files = "src/*.h"
-  s.source_files = "src/*.{h,m,mm}", "src/private/*.{h,m,mm}"
-  s.resources = ["src/MaterialRobotoFontLoader.bundle"]
-  s.dependency 'MDFFontDiskLoader'
+  s.default_subspec = "RobotoFontLoader"
+
+  s.subspec "RobotoFontLoader" do |ss|
+    ss.public_header_files = "src/*.h"
+    ss.source_files = "src/*.{h,m,mm}", "src/private/*.{h,m,mm}"
+    ss.resources = ["src/MaterialRobotoFontLoader.bundle"]
+    s.dependency 'MDFFontDiskLoader'
+  end
+
+  s.subspec "MDCTypography" do |ss|
+    ss.public_header_files = "src/MDCTypography/*.h"
+    ss.source_files = "src/MDCTypography/*.{h,m,mm}", "src/MDCTypography/private/*.{h,m,mm}"
+    ss.dependency 'RobotoFontLoader'
+  end
+
 end
