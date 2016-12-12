@@ -4,6 +4,9 @@ target "RobotoFontLoaderExample" do
   pod 'MDFRobotoFontLoader', :path => '../../../'
   pod 'CatalogByConvention'
 
+  # Note: this works around the unreleased state of the MDCTypography.
+  pod 'MaterialComponents/Typography', :path => '../../../../material-components-ios/'
+
   target 'RobotoFontLoaderExampleTests' do
   end
 end
