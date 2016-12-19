@@ -17,10 +17,11 @@ Pod::Spec.new do |s|
     s.dependency 'MDFFontDiskLoader'
   end
 
-  s.subspec "MDCTypography" do |ss|
-    ss.public_header_files = "src/MDCTypography/*.h"
-    ss.source_files = "src/MDCTypography/*.{h,m,mm}", "src/MDCTypography/private/*.{h,m,mm}"
+  s.subspec "MDCTypographyAdditions" do |ss|
+    ss.public_header_files = "src/MDCTypographyAdditions/*.h"
+    ss.source_files = "src/MDCTypographyAdditions/*.{h,m,mm}", "src/MDCTypographyAdditions/private/*.{h,m,mm}"
     ss.dependency 'MDFRobotoFontLoader/RobotoFontLoader'
+    ss.dependency 'MaterialComponents/Typography'
   end
 
 end

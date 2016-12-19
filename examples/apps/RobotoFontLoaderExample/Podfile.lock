@@ -1,10 +1,12 @@
 PODS:
   - CatalogByConvention (2.0.0)
+  - MaterialComponents/Typography (19.0.4)
   - MDFFontDiskLoader (1.0.0)
   - MDFRobotoFontLoader (1.0.0):
     - MDFFontDiskLoader
     - MDFRobotoFontLoader/RobotoFontLoader (= 1.0.0)
-  - MDFRobotoFontLoader/MDCTypography (1.0.0):
+  - MDFRobotoFontLoader/MDCTypographyAdditions (1.0.0):
+    - MaterialComponents/Typography
     - MDFFontDiskLoader
     - MDFRobotoFontLoader/RobotoFontLoader
   - MDFRobotoFontLoader/RobotoFontLoader (1.0.0):
@@ -13,7 +15,7 @@ PODS:
 DEPENDENCIES:
   - CatalogByConvention
   - MDFRobotoFontLoader (from `../../../`)
-  - MDFRobotoFontLoader/MDCTypography (from `../../../`)
+  - MDFRobotoFontLoader/MDCTypographyAdditions (from `../../../`)
 
 EXTERNAL SOURCES:
   MDFRobotoFontLoader:
@@ -21,9 +23,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CatalogByConvention: be55c2263132e4f9f59299ac8a528ee8715b3275
+  MaterialComponents: bd2bbd4e8631c6a560100848c7d2a864e61b6716
   MDFFontDiskLoader: 95d6c92c644f24897dee5a860973b0da4d9a1ce4
-  MDFRobotoFontLoader: 961232676dd9bcdb1e4678ba686bcc75cdd67c2b
+  MDFRobotoFontLoader: e80490e2ba01a318759b6d220f01cc86d5c4b3c4
 
-PODFILE CHECKSUM: 69830c35182a8fffb3cc957ca7f14345d4a776dd
+PODFILE CHECKSUM: 97c787a870cd8a25dc21de6af6e774b386b1683d
 
 COCOAPODS: 1.1.1

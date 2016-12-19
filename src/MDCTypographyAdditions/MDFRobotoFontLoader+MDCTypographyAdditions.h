@@ -16,11 +16,12 @@
 
 #import <Foundation/Foundation.h>
 #import "MaterialRobotoFontLoader.h"
+#import "MaterialTypography.h"
 
 /**
  The MDCRobotoFontLoader class already informally conforms to the MDCTypographyFontLoading protocol.
  This formalizes that conformace.
  */
-@interface MDFRobotoFontLoader (MaterialTypographyAdditions) <NSCopying>
+@interface MDFRobotoFontLoader (MaterialTypographyAdditions) <MDCTypographyFontLoading>
 
 @end

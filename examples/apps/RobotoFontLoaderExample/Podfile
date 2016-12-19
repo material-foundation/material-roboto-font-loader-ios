@@ -2,7 +2,7 @@ use_frameworks!
 
 target "RobotoFontLoaderExample" do
   pod 'MDFRobotoFontLoader', :path => '../../../'
-  pod 'MDFRobotoFontLoader/MDCTypography', :path => '../../../'
+  pod 'MDFRobotoFontLoader/MDCTypographyAdditions', :path => '../../../'
   pod 'CatalogByConvention'
 
   target 'RobotoFontLoaderExampleTests' do
