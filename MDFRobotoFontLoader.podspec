@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.subspec "MDCTypography" do |ss|
     ss.public_header_files = "src/MDCTypography/*.h"
     ss.source_files = "src/MDCTypography/*.{h,m,mm}", "src/MDCTypography/private/*.{h,m,mm}"
-    ss.dependency 'RobotoFontLoader'
+    ss.dependency 'MDFRobotoFontLoader/RobotoFontLoader'
   end
 
 end

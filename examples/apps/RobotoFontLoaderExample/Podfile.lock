@@ -1,30 +1,29 @@
 PODS:
   - CatalogByConvention (2.0.0)
-  - MaterialComponents/Typography (17.2.0)
   - MDFFontDiskLoader (1.0.0)
   - MDFRobotoFontLoader (1.0.0):
     - MDFFontDiskLoader
     - MDFRobotoFontLoader/RobotoFontLoader (= 1.0.0)
+  - MDFRobotoFontLoader/MDCTypography (1.0.0):
+    - MDFFontDiskLoader
+    - MDFRobotoFontLoader/RobotoFontLoader
   - MDFRobotoFontLoader/RobotoFontLoader (1.0.0):
     - MDFFontDiskLoader
 
 DEPENDENCIES:
   - CatalogByConvention
-  - MaterialComponents/Typography (from `../../../../material-components-ios/`)
   - MDFRobotoFontLoader (from `../../../`)
+  - MDFRobotoFontLoader/MDCTypography (from `../../../`)
 
 EXTERNAL SOURCES:
-  MaterialComponents:
-    :path: "../../../../material-components-ios/"
   MDFRobotoFontLoader:
     :path: "../../../"
 
 SPEC CHECKSUMS:
   CatalogByConvention: be55c2263132e4f9f59299ac8a528ee8715b3275
-  MaterialComponents: 6c525c8aaabf376c20a10530ce6785833ff96225
   MDFFontDiskLoader: 95d6c92c644f24897dee5a860973b0da4d9a1ce4
-  MDFRobotoFontLoader: 60965d31e3aa04635f0a10751bb6d93ae17d5035
+  MDFRobotoFontLoader: 961232676dd9bcdb1e4678ba686bcc75cdd67c2b
 
-PODFILE CHECKSUM: 9c800d8dd5128c665571755445379226846233f8
+PODFILE CHECKSUM: 69830c35182a8fffb3cc957ca7f14345d4a776dd
 
 COCOAPODS: 1.1.1
