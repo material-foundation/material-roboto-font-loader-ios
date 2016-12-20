@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     ss.public_header_files = "src/*.h"
     ss.source_files = "src/*.{h,m,mm}", "src/private/*.{h,m,mm}"
     ss.resources = ["src/MaterialRobotoFontLoader.bundle"]
-    s.dependency 'MDFFontDiskLoader'
+    ss.dependency 'MDFFontDiskLoader'
   end
 
   s.subspec "MDCTypographyAdditions" do |ss|
