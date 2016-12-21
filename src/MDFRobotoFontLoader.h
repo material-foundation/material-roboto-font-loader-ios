@@ -83,4 +83,9 @@
  */
 - (nonnull UIFont *)boldItalicFontOfSize:(CGFloat)fontSize;
 
+/** Returns a bold version of the specified font. */
++ (nonnull UIFont *)boldFontFromFont:(nonnull UIFont *)font;
+
+/** Returns an italic version of the specified font. */
++ (nonnull UIFont *)italicFontFromFont:(nonnull UIFont *)font;
 @end

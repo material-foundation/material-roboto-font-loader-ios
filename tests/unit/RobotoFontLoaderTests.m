@@ -74,6 +74,8 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 @property(nonatomic, strong, null_resettable) NSBundle *baseBundle;
 @property(nonatomic, assign) BOOL disableSanityChecks;
 
++ (BOOL)isItalicFontName:(nonnull NSString *)fontName;
++ (BOOL)isBoldFontName:(nonnull NSString *)fontName;
 + (NSBundle *)baseBundle;
 
 - (instancetype)initInternal;
@@ -436,6 +438,65 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
   XCTAssertTrue([actual hasSuffix:expected], @"Description %@ must end with: %@", actual, expected);
 }
 
+- (void)testIsItalicFontName {
+  XCTAssertFalse([MDFRobotoFontLoader isItalicFontName:MDFRobotoRegularFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isItalicFontName:MDFRobotoBoldFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isItalicFontName:MDFRobotoMediumFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isItalicFontName:MDFRobotoLightFontName]);
+
+  XCTAssertTrue([MDFRobotoFontLoader isItalicFontName:MDFRobotoRegularItalicFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isItalicFontName:MDFRobotoBoldItalicFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isItalicFontName:MDFRobotoMediumItalicFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isItalicFontName:MDFRobotoLightItalicFontName]);
+}
+
+- (void)testIsBoldFontName {
+  XCTAssertTrue([MDFRobotoFontLoader isBoldFontName:MDFRobotoBoldItalicFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isBoldFontName:MDFRobotoMediumItalicFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isBoldFontName:MDFRobotoBoldFontName]);
+  XCTAssertTrue([MDFRobotoFontLoader isBoldFontName:MDFRobotoMediumFontName]);
+
+  XCTAssertFalse([MDFRobotoFontLoader isBoldFontName:MDFRobotoRegularFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isBoldFontName:MDFRobotoLightFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isBoldFontName:MDFRobotoRegularItalicFontName]);
+  XCTAssertFalse([MDFRobotoFontLoader isBoldFontName:MDFRobotoLightItalicFontName]);
+}
+
+- (void)testItalicFontFromFont {
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
+  CGFloat size = 10;
+  NSDictionary *italicFontForFont = @{
+      [fontLoader lightFontOfSize:size]:[fontLoader lightItalicFontOfSize:size],
+      [fontLoader regularFontOfSize:size]:[fontLoader italicFontOfSize:size],
+      [fontLoader mediumFontOfSize:size]:[fontLoader mediumItalicFontOfSize:size],
+      [fontLoader boldFontOfSize:size]:[fontLoader boldItalicFontOfSize:size],
+      [fontLoader lightItalicFontOfSize:size]:[fontLoader lightItalicFontOfSize:size],
+      [fontLoader italicFontOfSize:size]:[fontLoader italicFontOfSize:size],
+      [fontLoader mediumItalicFontOfSize:size]:[fontLoader mediumItalicFontOfSize:size],
+      [fontLoader boldItalicFontOfSize:size]:[fontLoader boldItalicFontOfSize:size],
+  };
+  for (UIFont *font in italicFontForFont) {
+    XCTAssertEqualObjects([MDFRobotoFontLoader italicFontFromFont:font], italicFontForFont[font]);
+  }
+}
+
+- (void)testBoldFontFromFont {
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
+  CGFloat size = 10;
+  NSDictionary *boldFontForFont = @{
+      [fontLoader lightFontOfSize:size]:[fontLoader mediumFontOfSize:size],
+      [fontLoader regularFontOfSize:size]:[fontLoader mediumFontOfSize:size],
+      [fontLoader mediumFontOfSize:size]:[fontLoader mediumFontOfSize:size],
+      [fontLoader boldFontOfSize:size]:[fontLoader boldFontOfSize:size],
+      [fontLoader lightItalicFontOfSize:size]:[fontLoader mediumItalicFontOfSize:size],
+      [fontLoader italicFontOfSize:size]:[fontLoader mediumItalicFontOfSize:size],
+      [fontLoader mediumItalicFontOfSize:size]:[fontLoader mediumItalicFontOfSize:size],
+      [fontLoader boldItalicFontOfSize:size]:[fontLoader boldItalicFontOfSize:size],
+  };
+  for (UIFont *font in boldFontForFont) {
+    XCTAssertEqualObjects([MDFRobotoFontLoader boldFontFromFont:font], boldFontForFont[font]);
+  }
+}
 #pragma mark private
 
 - (CGFloat)randomNumber {

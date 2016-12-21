@@ -327,4 +327,52 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
   return font;
 }
 
++ (BOOL)isItalicFontName:(nonnull NSString *)fontName {
+  return [fontName isEqual:MDFRobotoRegularItalicFontName] ||
+  [fontName isEqual:MDFRobotoBoldItalicFontName] ||
+  [fontName isEqual:MDFRobotoMediumItalicFontName] ||
+  [fontName isEqual:MDFRobotoLightItalicFontName];
+}
+
++ (BOOL)isBoldFontName:(nonnull NSString *)fontName {
+  return [fontName isEqualToString:MDFRobotoMediumFontName] ||
+  [fontName isEqualToString:MDFRobotoBoldFontName] ||
+  [fontName isEqualToString:MDFRobotoMediumItalicFontName] ||
+  [fontName isEqualToString:MDFRobotoBoldItalicFontName];
+}
+
++ (UIFont *)boldFontFromFont:(UIFont *)font {
+  NSString *fontName = font.fontName;
+  CGFloat fontSize = font.pointSize;
+  if ([self isBoldFontName:fontName]) {
+    return font;
+  } else if ([fontName isEqual:MDFRobotoRegularFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] mediumFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoRegularItalicFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] mediumItalicFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoLightFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] mediumFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoLightItalicFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] mediumItalicFontOfSize:fontSize];
+  }
+  return [UIFont boldSystemFontOfSize:fontSize];
+}
+
++ (UIFont *)italicFontFromFont:(UIFont *)font {
+  NSString *fontName = font.fontName;
+  CGFloat fontSize = font.pointSize;
+  if ([self isItalicFontName:fontName]) {
+    return font;
+  } else if ([fontName isEqual:MDFRobotoRegularFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] italicFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoBoldFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] boldItalicFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoMediumFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] mediumItalicFontOfSize:fontSize];
+  } else if ([fontName isEqual:MDFRobotoLightFontName]) {
+    return [[MDFRobotoFontLoader sharedInstance] lightItalicFontOfSize:fontSize];
+  }
+  return [UIFont italicSystemFontOfSize:fontSize];
+}
+
 @end
