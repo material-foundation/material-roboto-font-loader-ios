@@ -74,6 +74,8 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 @property(nonatomic, strong, null_resettable) NSBundle *baseBundle;
 @property(nonatomic, assign) BOOL disableSanityChecks;
 
++ (BOOL)isItalicFontName:(nonnull NSString *)fontName;
++ (BOOL)isBoldFontName:(nonnull NSString *)fontName;
 + (NSBundle *)baseBundle;
 
 - (instancetype)initInternal;

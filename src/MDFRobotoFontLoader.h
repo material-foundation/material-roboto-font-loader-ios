@@ -83,12 +83,6 @@
  */
 - (nonnull UIFont *)boldItalicFontOfSize:(CGFloat)fontSize;
 
-/** Returns YES if the font name represents what we consider to be an "italic" font. */
-+ (BOOL)isItalicFontName:(nonnull NSString *)fontName;
-
-/** Returns YES if the font name represents what we consider to be a "bold" font. */
-+ (BOOL)isBoldFontName:(nonnull NSString *)fontName;
-
 /** Returns a bold version of the specified font. */
 + (nonnull UIFont *)boldFontFromFont:(nonnull UIFont *)font;
 
