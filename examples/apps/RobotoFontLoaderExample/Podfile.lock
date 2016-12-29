@@ -2,12 +2,12 @@ PODS:
   - CatalogByConvention (2.0.0)
   - MaterialComponents/Typography (19.0.4)
   - MDFFontDiskLoader (1.0.0)
-  - MDFRobotoFontLoader (1.1.0):
-    - MDFRobotoFontLoader/RobotoFontLoader (= 1.1.0)
-  - MDFRobotoFontLoader/MDCTypographyAdditions (1.1.0):
+  - MDFRobotoFontLoader (1.1.1):
+    - MDFRobotoFontLoader/RobotoFontLoader (= 1.1.1)
+  - MDFRobotoFontLoader/MDCTypographyAdditions (1.1.1):
     - MaterialComponents/Typography
     - MDFRobotoFontLoader/RobotoFontLoader
-  - MDFRobotoFontLoader/RobotoFontLoader (1.1.0):
+  - MDFRobotoFontLoader/RobotoFontLoader (1.1.1):
     - MDFFontDiskLoader
 
 DEPENDENCIES:
@@ -23,7 +23,7 @@ SPEC CHECKSUMS:
   CatalogByConvention: be55c2263132e4f9f59299ac8a528ee8715b3275
   MaterialComponents: bd2bbd4e8631c6a560100848c7d2a864e61b6716
   MDFFontDiskLoader: 95d6c92c644f24897dee5a860973b0da4d9a1ce4
-  MDFRobotoFontLoader: 077e2a036e5afdf02a45b5a1b4197eba83801205
+  MDFRobotoFontLoader: 606b5a7205200ccc5dcef549af79653a7a87ddd2
 
 PODFILE CHECKSUM: 97c787a870cd8a25dc21de6af6e774b386b1683d
 
