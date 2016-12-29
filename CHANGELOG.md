@@ -1,3 +1,7 @@
+# 1.1.1
+
+* Corrected import path to pass `pod lib lint`
+
 # 1.1.0
 
 ## API changes
