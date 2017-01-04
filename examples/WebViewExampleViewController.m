@@ -27,7 +27,7 @@
       UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin |
       UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
-  NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"RobotoWebView" ofType:@"html"];
+  NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"WebViewExample" ofType:@"html"];
   NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
 
   // This ensures that Roboto has been loaded and only needs to be called once.
@@ -37,12 +37,11 @@
   webView.autoresizingMask = flexibleMargins;
   [webView loadHTMLString:htmlString baseURL: [[NSBundle mainBundle] bundleURL]];
   [self.view addSubview:webView];
-  NSLog(@"Available fonts: %@", [UIFont familyNames]);
 }
 
 
 + (NSArray *)catalogBreadcrumbs {
-  return @[ @"Typography and Fonts", @"Roboto Font Loader (webview)" ];
+  return @[ @"Typography and Fonts", @"UIWebView (local roboto)" ];
 }
 
 @end

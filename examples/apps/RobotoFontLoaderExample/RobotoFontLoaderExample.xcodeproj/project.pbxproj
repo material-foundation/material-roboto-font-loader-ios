@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2070DBAA1E1D73C6000A4313 /* WebViewExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2070DBA91E1D73C6000A4313 /* WebViewExampleViewController.m */; };
-		2070DBAC1E1D75F1000A4313 /* RobotoWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = 2070DBAB1E1D75F1000A4313 /* RobotoWebView.html */; };
+		2070DBAC1E1D75F1000A4313 /* WebViewExample.html in Resources */ = {isa = PBXBuildFile; fileRef = 2070DBAB1E1D75F1000A4313 /* WebViewExample.html */; };
 		20BB4D3E1DEE191500838A41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D3D1DEE191500838A41 /* main.m */; };
 		20BB4D411DEE191500838A41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB4D401DEE191500838A41 /* AppDelegate.m */; };
 		20BB4D471DEE191500838A41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20BB4D451DEE191500838A41 /* Main.storyboard */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		2070DBA81E1D73C6000A4313 /* WebViewExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewExampleViewController.h; path = ../../../WebViewExampleViewController.h; sourceTree = "<group>"; };
 		2070DBA91E1D73C6000A4313 /* WebViewExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewExampleViewController.m; path = ../../../WebViewExampleViewController.m; sourceTree = "<group>"; };
-		2070DBAB1E1D75F1000A4313 /* RobotoWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = RobotoWebView.html; path = ../../../RobotoWebView.html; sourceTree = "<group>"; };
+		2070DBAB1E1D75F1000A4313 /* WebViewExample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = WebViewExample.html; path = ../../../WebViewExample.html; sourceTree = "<group>"; };
 		20BB4D391DEE191500838A41 /* RobotoFontLoaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RobotoFontLoaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20BB4D3D1DEE191500838A41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20BB4D3F1DEE191500838A41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				20BB4D3C1DEE191500838A41 /* Supporting Files */,
 				2070DBA81E1D73C6000A4313 /* WebViewExampleViewController.h */,
 				2070DBA91E1D73C6000A4313 /* WebViewExampleViewController.m */,
-				2070DBAB1E1D75F1000A4313 /* RobotoWebView.html */,
+				2070DBAB1E1D75F1000A4313 /* WebViewExample.html */,
 			);
 			path = RobotoFontLoaderExample;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2070DBAC1E1D75F1000A4313 /* RobotoWebView.html in Resources */,
+				2070DBAC1E1D75F1000A4313 /* WebViewExample.html in Resources */,
 				20BB4D4C1DEE191500838A41 /* LaunchScreen.storyboard in Resources */,
 				20BB4D491DEE191500838A41 /* Assets.xcassets in Resources */,
 				20BB4D471DEE191500838A41 /* Main.storyboard in Resources */,
