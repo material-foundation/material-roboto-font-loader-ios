@@ -28,7 +28,8 @@
       UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 
   NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"WebViewExample" ofType:@"html"];
-  NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+  NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile
+                                                   encoding:NSUTF8StringEncoding error:nil];
 
   // This ensures that Roboto has been loaded and only needs to be called once.
   [[MDFRobotoFontLoader sharedInstance] regularFontOfSize:16];
