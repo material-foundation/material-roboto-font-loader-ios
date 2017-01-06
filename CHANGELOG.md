@@ -1,3 +1,7 @@
+# 1.1.2
+
+* Corrected import paths again because `pod lib lint --use-libraries` passes.
+
 # 1.1.1
 
 * Corrected import path to pass `pod lib lint`
