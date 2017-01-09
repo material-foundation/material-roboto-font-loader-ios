@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "MDFRobotoFontLoader"
   s.summary      = "MDFRobotoFontLoader"
-  s.version      = "1.1.2"
+  s.version      = "1.1.3"
   s.authors      = "The Material Foundation Authors"
   s.license      = "Apache 2.0"
   s.homepage     = "https://github.com/material-foundation/material-roboto-font-loader-ios"

@@ -1,6 +1,10 @@
-# 1.1.2
+# 1.1.3
 
 * Corrected import paths again because `pod lib lint --use-libraries` passes.
+
+# 1.1.2
+
+* Added example for Roboto use in UIWebViews
 
 # 1.1.1
 
