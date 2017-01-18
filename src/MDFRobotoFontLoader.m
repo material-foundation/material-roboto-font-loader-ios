@@ -375,4 +375,9 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
   return [UIFont italicSystemFontOfSize:fontSize];
 }
 
++ (BOOL)isLargeForContrastRatios:(nullable UIFont *)font {
+  return font.pointSize >= 18 ||
+      ([MDFRobotoFontLoader isBoldFontName:font.fontName] && font.pointSize >= 14);
+}
+
 @end
