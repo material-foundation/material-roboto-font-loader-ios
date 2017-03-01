@@ -375,9 +375,25 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
   return [UIFont italicSystemFontOfSize:fontSize];
 }
 
-+ (BOOL)isLargeForContrastRatios:(nullable UIFont *)font {
-  return font.pointSize >= 18 ||
-      ([MDFRobotoFontLoader isBoldFontName:font.fontName] && font.pointSize >= 14);
+- (BOOL)isLargeForContrastRatios:(UIFont *)font {
+  if (font.pointSize >= 18) {
+    return YES;
+  }
+  if (font.pointSize < 14) {
+    return NO;
+  }
+
+  UIFontDescriptor *fontDescriptor = font.fontDescriptor;
+  if ((fontDescriptor.symbolicTraits & UIFontDescriptorTraitBold) == UIFontDescriptorTraitBold) {
+    return YES;
+  }
+
+  // We treat medium as large for MDC accesibility when larger than 14
+  if ([font.fontName rangeOfString:@"medium" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+    return YES;
+  }
+
+  return NO;
 }
 
 @end

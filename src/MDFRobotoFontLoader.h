@@ -99,6 +99,6 @@
  @param font The font to examine, or nil.
  @return YES if the font is non-nil and is considered "large".
  */
-+ (BOOL)isLargeForContrastRatios:(nullable UIFont *)font;
+- (BOOL)isLargeForContrastRatios:(nonnull UIFont *)font;
 
 @end

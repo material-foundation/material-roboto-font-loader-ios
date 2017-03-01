@@ -511,35 +511,49 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
   }
 }
 
-- (void)testIsLargeFontContrastRatios {
+- (void)testIsLargeForContrastRatio {
+  // Given
+  CGFloat smallSize = 10.0f;
+  CGFloat largeIfBoldSize = 15.0f;
+  CGFloat largeSize = 18.0f;
   MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader boldFontOfSize:14]]);
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader regularFontOfSize:18]]);
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader regularFontOfSize:20]]);
 
-
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader boldFontOfSize:13]]);
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader regularFontOfSize:17]]);
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader regularFontOfSize:10]]);
-
-  // Bold and thicker fonts are considered large at a lower font size than nonbold fonts.
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader boldFontOfSize:15]]);
-  // Material considers 'medium' as 'bold' when calculating contrast ratios for text.
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader mediumFontOfSize:15]]);
-
-  // Non-bold fonts are not considered large at the lower font size threshold.
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader regularFontOfSize:15]]);
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader lightFontOfSize:15]]);
-
-  // italic
+  // Then
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[UIFont systemFontOfSize:smallSize]]);
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[UIFont boldSystemFontOfSize:smallSize]]);
   XCTAssertTrue(
-      [MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader boldItalicFontOfSize:14]]);
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader italicFontOfSize:18]]);
-  XCTAssertTrue([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader italicFontOfSize:20]]);
+      [fontLoader isLargeForContrastRatios:[UIFont boldSystemFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[UIFont systemFontOfSize:largeSize]]);
+
+  // Light
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:smallSize]]);
   XCTAssertFalse(
-      [MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader boldItalicFontOfSize:13]]);
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader italicFontOfSize:17]]);
-  XCTAssertFalse([MDFRobotoFontLoader isLargeForContrastRatios: [fontLoader italicFontOfSize:10]]);
+      [fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:largeSize]]);
+
+  // Regular
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:smallSize]]);
+  XCTAssertFalse(
+      [fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:largeSize]]);
+
+  // Medium
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:smallSize]]);
+  // We treat medium as large for MDC accesibility.
+  XCTAssertTrue(
+      [fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:largeSize]]);
+
+  // Bold
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:smallSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:largeSize]]);
+
+  // Italic
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:smallSize]]);
+  XCTAssertFalse(
+      [fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:largeSize]]);
 }
 
 #pragma mark private
