@@ -84,6 +84,19 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 
 @implementation RobotoFontLoaderTests
 
+- (void)testItalicFontFromFontRegular {
+  // Given
+  CGFloat size = arc4random_uniform(1000) / (arc4random_uniform(10) + 1);
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
+  UIFont *regularFont = [fontLoader regularFontOfSize:size];
+
+  // When
+  UIFont *font = [MDFRobotoFontLoader italicFontFromFont:regularFont];
+
+  // Then
+  XCTAssertEqualObjects(font.fontName, @"Roboto-Italic");
+}
+
 - (void)testRobotoRegularWithSize {
   // Given
   CGFloat size = [self randomNumber];
@@ -497,6 +510,52 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
     XCTAssertEqualObjects([MDFRobotoFontLoader boldFontFromFont:font], boldFontForFont[font]);
   }
 }
+
+- (void)testIsLargeForContrastRatio {
+  // Given
+  CGFloat smallSize = 10.0f;
+  CGFloat largeIfBoldSize = 15.0f;
+  CGFloat largeSize = 18.0f;
+  MDFRobotoFontLoader *fontLoader = [MDFRobotoFontLoader sharedInstance];
+
+  // Then
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[UIFont systemFontOfSize:smallSize]]);
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[UIFont boldSystemFontOfSize:smallSize]]);
+  XCTAssertTrue(
+      [fontLoader isLargeForContrastRatios:[UIFont boldSystemFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[UIFont systemFontOfSize:largeSize]]);
+
+  // Light
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:smallSize]]);
+  XCTAssertFalse(
+      [fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader lightFontOfSize:largeSize]]);
+
+  // Regular
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:smallSize]]);
+  XCTAssertFalse(
+      [fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader regularFontOfSize:largeSize]]);
+
+  // Medium
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:smallSize]]);
+  // We treat medium as large for MDC accesibility.
+  XCTAssertTrue(
+      [fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader mediumFontOfSize:largeSize]]);
+
+  // Bold
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:smallSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader boldFontOfSize:largeSize]]);
+
+  // Italic
+  XCTAssertFalse([fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:smallSize]]);
+  XCTAssertFalse(
+      [fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:largeIfBoldSize]]);
+  XCTAssertTrue([fontLoader isLargeForContrastRatios:[fontLoader italicFontOfSize:largeSize]]);
+}
+
 #pragma mark private
 
 - (CGFloat)randomNumber {
