@@ -1,3 +1,7 @@
+# 1.2.0
+
+* Added API: isLargeForContrastRatio: so that medium can be considered large at 14pt size.
+
 # 1.1.3
 
 * Corrected import paths again because `pod lib lint --use-libraries` passes.
