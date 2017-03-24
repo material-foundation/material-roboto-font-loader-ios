@@ -4,12 +4,12 @@
    all release-blocking clients are ready**. Otherwise you might publish a release that isn't
    actually stable.
 1. Visit our
-   [GitHub list of releases](https://github.com/material-components/material-components-ios/releases), click on
+   [GitHub list of releases](releases), click on
    "Draft a new release".
 1. Tag the release "vX.Y.Z".
 1. Select the stable branch.
 1. Title the release "Release X.Y.Z".
-1. In the body of the release notes, paste the text from [CHANGELOG.md](https://github.com/material-components/material-components-ios/blob/stable/CHANGELOG.md) for this release.
+1. In the body of the release notes, paste the text from [CHANGELOG.md](stable/CHANGELOG.md) for this release.
 1. Publish the release.
 
 ## Publish to Cocoapods
