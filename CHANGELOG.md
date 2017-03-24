@@ -1,3 +1,7 @@
+# 1.3.0
+
+* Added API: Instance methods for getting bold and italic fonts from another font.
+
 # 1.2.0
 
 * Added API: isLargeForContrastRatio: so that medium can be considered large at 14pt size.
