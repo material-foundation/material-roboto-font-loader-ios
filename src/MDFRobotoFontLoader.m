@@ -83,7 +83,6 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 - (instancetype)initInternal {
   self = [super init];
   if (self) {
-    self = [super init];
     _baseBundle = [MDFRobotoFontLoader baseBundle];
     _bundleFileName = MDFRobotoBundle;
   }
