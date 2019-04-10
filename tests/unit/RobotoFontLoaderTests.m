@@ -20,25 +20,25 @@
 #import "MDFRobotoFontLoader.h"
 
 static const CGFloat kEpsilonAccuracy = 0.001f;
-static NSString *const MDFRobotoRegularFontName = @"Roboto-Regular";
-static NSString *const MDFRobotoRegularItalicFontName = @"Roboto-Italic";
-static NSString *const MDFRobotoBoldFontName = @"Roboto-Bold";
-static NSString *const MDFRobotoBoldItalicFontName = @"Roboto-BoldItalic";
-static NSString *const MDFRobotoMediumFontName = @"Roboto-Medium";
-static NSString *const MDFRobotoMediumItalicFontName = @"Roboto-MediumItalic";
-static NSString *const MDFRobotoLightFontName = @"Roboto-Light";
-static NSString *const MDFRobotoLightItalicFontName = @"Roboto-LightItalic";
+NSString *const MDFRobotoRegularFontName = @"Roboto-Regular";
+NSString *const MDFRobotoRegularItalicFontName = @"Roboto-Italic";
+NSString *const MDFRobotoBoldFontName = @"Roboto-Bold";
+NSString *const MDFRobotoBoldItalicFontName = @"Roboto-BoldItalic";
+NSString *const MDFRobotoMediumFontName = @"Roboto-Medium";
+NSString *const MDFRobotoMediumItalicFontName = @"Roboto-MediumItalic";
+NSString *const MDFRobotoLightFontName = @"Roboto-Light";
+NSString *const MDFRobotoLightItalicFontName = @"Roboto-LightItalic";
 
-static NSString *const MDFRobotoRegularFontFilename = @"Roboto-Regular.unhinted.ttf";
-static NSString *const MDFRobotoRegularItalicFontFilename = @"Roboto-Italic.unhinted.ttf";
-static NSString *const MDFRobotoBoldFontFilename = @"Roboto-Bold.unhinted.ttf";
-static NSString *const MDFRobotoBoldItalicFontFilename = @"Roboto-BoldItalic.unhinted.ttf";
-static NSString *const MDFRobotoMediumFontFilename = @"Roboto-Medium.unhinted.ttf";
-static NSString *const MDFRobotoMediumItalicFontFilename = @"Roboto-MediumItalic.unhinted.ttf";
-static NSString *const MDFRobotoLightFontFilename = @"Roboto-Light.unhinted.ttf";
-static NSString *const MDFRobotoLightItalicFontFilename = @"Roboto-LightItalic.unhinted.ttf";
+NSString *const MDFRobotoRegularFontFilename = @"Roboto-Regular.ttf";
+NSString *const MDFRobotoRegularItalicFontFilename = @"Roboto-Italic.ttf";
+NSString *const MDFRobotoBoldFontFilename = @"Roboto-Bold.ttf";
+NSString *const MDFRobotoBoldItalicFontFilename = @"Roboto-BoldItalic.ttf";
+NSString *const MDFRobotoMediumFontFilename = @"Roboto-Medium.ttf";
+NSString *const MDFRobotoMediumItalicFontFilename = @"Roboto-MediumItalic.ttf";
+NSString *const MDFRobotoLightFontFilename = @"Roboto-Light.ttf";
+NSString *const MDFRobotoLightItalicFontFilename = @"Roboto-LightItalic.ttf";
 
-static NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
+NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 
 /**
  For our tests we are following a Given When Then structure as defined in
