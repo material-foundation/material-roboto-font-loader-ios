@@ -83,7 +83,6 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 - (instancetype)initInternal {
   self = [super init];
   if (self) {
-    self = [super init];
     _baseBundle = [MDFRobotoFontLoader baseBundle];
     _bundleFileName = MDFRobotoBundle;
   }
@@ -154,87 +153,103 @@ NSString *const MDFRobotoBundle = @"MaterialRobotoFontLoader.bundle";
 }
 
 - (MDFFontDiskLoader *)regularFontLoader {
-  if (!_regularFontLoader) {
-    _regularFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoRegularFontName
-                                                            filename:MDFRobotoRegularFontFilename
-                                                      bundleFileName:_bundleFileName
-                                                          baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_regularFontLoader) {
+      _regularFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoRegularFontName
+                                                              filename:MDFRobotoRegularFontFilename
+                                                        bundleFileName:_bundleFileName
+                                                            baseBundle:_baseBundle];
+    }
+    return _regularFontLoader;
   }
-  return _regularFontLoader;
 }
 
 - (MDFFontDiskLoader *)mediumFontLoader {
-  if (!_mediumFontLoader) {
-    _mediumFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoMediumFontName
-                                                           filename:MDFRobotoMediumFontFilename
-                                                     bundleFileName:_bundleFileName
-                                                         baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_mediumFontLoader) {
+      _mediumFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoMediumFontName
+                                                             filename:MDFRobotoMediumFontFilename
+                                                       bundleFileName:_bundleFileName
+                                                           baseBundle:_baseBundle];
+    }
+    return _mediumFontLoader;
   }
-  return _mediumFontLoader;
 }
 
 - (MDFFontDiskLoader *)lightFontLoader {
-  if (!_lightFontLoader) {
-    _lightFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoLightFontName
-                                                          filename:MDFRobotoLightFontFilename
-                                                    bundleFileName:_bundleFileName
-                                                        baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_lightFontLoader) {
+      _lightFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoLightFontName
+                                                            filename:MDFRobotoLightFontFilename
+                                                      bundleFileName:_bundleFileName
+                                                          baseBundle:_baseBundle];
+    }
+    return _lightFontLoader;
   }
-  return _lightFontLoader;
 }
 
 - (MDFFontDiskLoader *)boldFontLoader {
-  if (!_boldFontLoader) {
-    _boldFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoBoldFontName
-                                                         filename:MDFRobotoBoldFontFilename
-                                                   bundleFileName:_bundleFileName
-                                                       baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_boldFontLoader) {
+      _boldFontLoader = [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoBoldFontName
+                                                           filename:MDFRobotoBoldFontFilename
+                                                     bundleFileName:_bundleFileName
+                                                         baseBundle:_baseBundle];
+    }
+    return _boldFontLoader;
   }
-  return _boldFontLoader;
 }
 
 - (MDFFontDiskLoader *)italicFontLoader {
-  if (!_italicFontLoader) {
-    _italicFontLoader =
-        [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoRegularItalicFontName
-                                           filename:MDFRobotoRegularItalicFontFilename
-                                     bundleFileName:_bundleFileName
-                                         baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_italicFontLoader) {
+      _italicFontLoader =
+          [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoRegularItalicFontName
+                                             filename:MDFRobotoRegularItalicFontFilename
+                                       bundleFileName:_bundleFileName
+                                           baseBundle:_baseBundle];
+    }
+    return _italicFontLoader;
   }
-  return _italicFontLoader;
 }
 
 - (MDFFontDiskLoader *)lightItalicFontLoader {
-  if (!_lightItalicFontLoader) {
-    _lightItalicFontLoader =
-        [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoLightItalicFontName
-                                           filename:MDFRobotoLightItalicFontFilename
-                                     bundleFileName:_bundleFileName
-                                         baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_lightItalicFontLoader) {
+      _lightItalicFontLoader =
+          [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoLightItalicFontName
+                                             filename:MDFRobotoLightItalicFontFilename
+                                       bundleFileName:_bundleFileName
+                                           baseBundle:_baseBundle];
+    }
+    return _lightItalicFontLoader;
   }
-  return _lightItalicFontLoader;
 }
 
 - (MDFFontDiskLoader *)mediumItalicFontLoader {
-  if (!_mediumItalicFontLoader) {
-    _mediumItalicFontLoader =
-        [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoMediumItalicFontName
-                                           filename:MDFRobotoMediumItalicFontFilename
-                                     bundleFileName:_bundleFileName
-                                         baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_mediumItalicFontLoader) {
+      _mediumItalicFontLoader =
+          [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoMediumItalicFontName
+                                             filename:MDFRobotoMediumItalicFontFilename
+                                       bundleFileName:_bundleFileName
+                                           baseBundle:_baseBundle];
+    }
+    return _mediumItalicFontLoader;
   }
-  return _mediumItalicFontLoader;
 }
 
 - (MDFFontDiskLoader *)boldItalicFontLoader {
-  if (!_boldItalicFontLoader) {
-    _boldItalicFontLoader =
-        [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoBoldItalicFontName
-                                           filename:MDFRobotoBoldItalicFontFilename
-                                     bundleFileName:_bundleFileName
-                                         baseBundle:_baseBundle];
+  @synchronized(self) {
+    if (!_boldItalicFontLoader) {
+      _boldItalicFontLoader =
+          [[MDFFontDiskLoader alloc] initWithFontName:MDFRobotoBoldItalicFontName
+                                             filename:MDFRobotoBoldItalicFontFilename
+                                       bundleFileName:_bundleFileName
+                                           baseBundle:_baseBundle];
+    }
+    return _boldItalicFontLoader;
   }
-  return _boldItalicFontLoader;
 }
 
 #pragma mark - Public
